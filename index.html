@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log in!</title>
+    <script src="LoginInfo.js"></script>
+    <script>
+        var passInput = document.getElementById("passcode");
+        passInput.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("loginbutton").click();
+            }
+        });
+    </script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <form class="form1" action="http://google.com">
+            <div class="formtitle">
+                Log in to view page!
+            </div>
+
+            <div class="input nobottomborder">
+                <div class="inputtext">
+                    Username:
+                </div>
+
+                <div class="inputcontent">
+                    <input id="username" /><br />
+                </div>
+
+                <div class="inputtext">
+                    Password:
+                </div>
+
+                <div class="inputcontent">
+                    <input type="password" id="passcode" /><br />
+                </div>
+            </div>
+
+            <div class="buttons">
+                <input class="orangebutton" id="loginbutton" type="button" value="Login" onclick="checkUser()" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
